@@ -24,17 +24,37 @@
   <!-- Load d3.js v6 -->
   <script src="https://d3js.org/d3.v6.js"></script>
 
-  <!-- Load d3.js v3 -->
-<!--  <script src="https://d3js.org/d3.v3.js"  charset="utf-8"></script>-->
+  <script src='https://cdn.plot.ly/plotly-2.12.1.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
 </head>
 
 <body>
 
   <!-- Create a div where the graph will take place -->
   <div id="my_dataviz"></div>
-  <textarea id="xy-result" cols="70" rows="40"></textarea>
+  <div id="my_dataviz3d"></div>
+
+  <button id="stop-button">Stop calculation</button>
+
+  <p></p>
+
+  <div class="results">
+    <div class="col">
+      <label for="xy-result">2d sphere coordinates<br/></label>
+      <textarea id="xy-result" cols="40" rows="40"></textarea>
+    </div>
+    <div class="col">
+      <label for="xy3d-result">3d sphere coordinates</label>
+      <textarea id="xy3d-result" cols="40" rows="40"></textarea>
+    </div>
+    <div class="col">
+      <label for="zemax-result">ZeMax OpticStudio script</label>
+      <textarea id="zemax-result" cols="40" rows="40"></textarea>
+    </div>
+  </div>
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/calculate_point.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 <!--  <script src="js/main_circle.js"></script>-->
